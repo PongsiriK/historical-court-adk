@@ -51,30 +51,4 @@
 * ระบบจะไม่ใช้ Prompt เพียงอย่างเดียวในการจบงาน แต่บังคับใช้ **Tool `exit_loop`** เท่านั้น
 * มีการกำหนด `max_iterations=4` เพื่อป้องกัน Infinite Loop
 
----
 
-## 🚀 How to Run
-
-1.  **Install Dependencies:**
-    ```bash
-    pip install google-adk langchain langchain-community wikipedia python-dotenv google-cloud-logging
-    ```
-
-2.  **Environment Setup:**
-    สร้างไฟล์ `.env` และกำหนดค่าดังนี้:
-    ```env
-    GOOGLE_CLOUD_PROJECT=your-project-id
-    MODEL=gemini-1.5-flash
-    GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json (Optional)
-    ```
-
-3.  **Run the Agent:**
-    ```bash
-    adk run .
-    # หรือ
-    adk web .
-    ```
-
-4.  **Check Results:**
-    เมื่อกระบวนการเสร็จสิ้น ไฟล์รายงานสรุปจะถูกบันทึกอยู่ที่:
-    `court_records/[TopicName].txt`
